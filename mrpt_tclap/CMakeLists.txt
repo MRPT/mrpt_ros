@@ -1,8 +1,8 @@
 # ROS wrapper CMake project for these MRPT libraries:
-# mrpt-obs, mrpt-topography
+#mrpt-tclap
 
 cmake_minimum_required(VERSION 3.5)
-project(mrpt_obs)
+project(mrpt_tclap)
 
 include(ExternalProject)
 
@@ -19,7 +19,6 @@ ExternalProject_Add(
     -DMRPT_INSTALL_EXAMPLES=OFF
     -DMRPT_INSTALL_SHARE_DIRS=OFF
     -DMRPT_BUILD_MANPAGES=OFF
-    -DMRPT_INSTALL_CONFIG_HEADERS=OFF
     # Granular builds for each ROS package:
     -DMRPT_BUILD_APPLICATIONS=OFF
     -DMRPT_DISABLE_PYTHON_BINDINGS=ON
@@ -28,6 +27,7 @@ ExternalProject_Add(
     -DMRPT_BUILD_rplidar_sdk=OFF
     -DMRPT_BUILD_xsens=OFF
     -DMRPT_BUILD_nanogui=OFF
+    -DMRPT_INSTALL_CONFIG_HEADERS=ON # only for the base_package
     # Libs:
     -DBUILD_mrpt-apps=OFF
     -DBUILD_mrpt-bayes=OFF
@@ -46,7 +46,7 @@ ExternalProject_Add(
     -DBUILD_mrpt-maps=OFF
     -DBUILD_mrpt-math=OFF
     -DBUILD_mrpt-nav=OFF
-    -DBUILD_mrpt-obs=ON
+    -DBUILD_mrpt-obs=OFF
     -DBUILD_mrpt-opengl=OFF
     -DBUILD_mrpt-poses=OFF
     -DBUILD_mrpt-random=OFF
@@ -55,9 +55,9 @@ ExternalProject_Add(
     -DBUILD_mrpt-serialization=OFF
     -DBUILD_mrpt-slam=OFF
     -DBUILD_mrpt-system=OFF
-    -DBUILD_mrpt-tclap=OFF
+    -DBUILD_mrpt-tclap=ON
     -DBUILD_mrpt-tfest=OFF
-    -DBUILD_mrpt-topography=ON
+    -DBUILD_mrpt-topography=OFF
     -DBUILD_mrpt-typemeta=OFF
     -DBUILD_mrpt-vision=OFF
   # no install during build

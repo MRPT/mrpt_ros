@@ -1,5 +1,5 @@
 # ROS wrapper CMake project for these MRPT libraries:
-# mrpt-poses, mrpt-tfest
+# mrpt-poses, mrpt-tfest, mrpt-bayes
 
 cmake_minimum_required(VERSION 3.5)
 project(mrpt_poses)
@@ -30,7 +30,7 @@ ExternalProject_Add(
     -DMRPT_BUILD_nanogui=OFF
     # Libs:
     -DBUILD_mrpt-apps=OFF
-    -DBUILD_mrpt-bayes=OFF
+    -DBUILD_mrpt-bayes=ON
     -DBUILD_mrpt-comms=OFF
     -DBUILD_mrpt-config=OFF
     -DBUILD_mrpt-containers=OFF

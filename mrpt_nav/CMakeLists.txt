@@ -1,8 +1,8 @@
 # ROS wrapper CMake project for these MRPT libraries:
-# mrpt-obs, mrpt-topography
+# mrpt-nav, mrpt-kinematics
 
 cmake_minimum_required(VERSION 3.5)
-project(mrpt_obs)
+project(mrpt_nav)
 
 include(ExternalProject)
 
@@ -42,11 +42,11 @@ ExternalProject_Add(
     -DBUILD_mrpt-hwdrivers=OFF
     -DBUILD_mrpt-img=OFF
     -DBUILD_mrpt-io=OFF
-    -DBUILD_mrpt-kinematics=OFF
+    -DBUILD_mrpt-kinematics=ON
     -DBUILD_mrpt-maps=OFF
     -DBUILD_mrpt-math=OFF
-    -DBUILD_mrpt-nav=OFF
-    -DBUILD_mrpt-obs=ON
+    -DBUILD_mrpt-nav=ON
+    -DBUILD_mrpt-obs=OFF
     -DBUILD_mrpt-opengl=OFF
     -DBUILD_mrpt-poses=OFF
     -DBUILD_mrpt-random=OFF
@@ -57,7 +57,7 @@ ExternalProject_Add(
     -DBUILD_mrpt-system=OFF
     -DBUILD_mrpt-tclap=OFF
     -DBUILD_mrpt-tfest=OFF
-    -DBUILD_mrpt-topography=ON
+    -DBUILD_mrpt-topography=OFF
     -DBUILD_mrpt-typemeta=OFF
     -DBUILD_mrpt-vision=OFF
   # no install during build

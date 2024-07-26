@@ -1,8 +1,8 @@
 # ROS wrapper CMake project for these MRPT libraries:
-# mrpt-obs, mrpt-topography
+# mrpt-ros2bridge
 
 cmake_minimum_required(VERSION 3.5)
-project(mrpt_obs)
+project(mrpt_ros2bridge)
 
 include(ExternalProject)
 
@@ -46,18 +46,18 @@ ExternalProject_Add(
     -DBUILD_mrpt-maps=OFF
     -DBUILD_mrpt-math=OFF
     -DBUILD_mrpt-nav=OFF
-    -DBUILD_mrpt-obs=ON
+    -DBUILD_mrpt-obs=OFF
     -DBUILD_mrpt-opengl=OFF
     -DBUILD_mrpt-poses=OFF
     -DBUILD_mrpt-random=OFF
-    -DBUILD_mrpt-ros2bridge=OFF
+    -DBUILD_mrpt-ros2bridge=ON
     -DBUILD_mrpt-rtti=OFF
     -DBUILD_mrpt-serialization=OFF
     -DBUILD_mrpt-slam=OFF
     -DBUILD_mrpt-system=OFF
     -DBUILD_mrpt-tclap=OFF
     -DBUILD_mrpt-tfest=OFF
-    -DBUILD_mrpt-topography=ON
+    -DBUILD_mrpt-topography=OFF
     -DBUILD_mrpt-typemeta=OFF
     -DBUILD_mrpt-vision=OFF
   # no install during build

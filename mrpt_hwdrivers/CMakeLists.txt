@@ -1,8 +1,8 @@
 # ROS wrapper CMake project for these MRPT libraries:
-# mrpt-obs, mrpt-topography
+# mrpt-hwdrivers, mrpt-comms
 
 cmake_minimum_required(VERSION 3.5)
-project(mrpt_obs)
+project(mrpt_hwdrivers)
 
 include(ExternalProject)
 
@@ -23,15 +23,15 @@ ExternalProject_Add(
     # Granular builds for each ROS package:
     -DMRPT_BUILD_APPLICATIONS=OFF
     -DMRPT_DISABLE_PYTHON_BINDINGS=ON
-    -DMRPT_WITH_ROBOPEAK_LIDAR=OFF
+    -DMRPT_WITH_ROBOPEAK_LIDAR=ON
     -DMRPT_BUILD_wxThings=OFF
-    -DMRPT_BUILD_rplidar_sdk=OFF
-    -DMRPT_BUILD_xsens=OFF
+    -DMRPT_BUILD_rplidar_sdk=ON
+    -DMRPT_BUILD_xsens=ON
     -DMRPT_BUILD_nanogui=OFF
     # Libs:
     -DBUILD_mrpt-apps=OFF
     -DBUILD_mrpt-bayes=OFF
-    -DBUILD_mrpt-comms=OFF
+    -DBUILD_mrpt-comms=ON
     -DBUILD_mrpt-config=OFF
     -DBUILD_mrpt-containers=OFF
     -DBUILD_mrpt-core=OFF
@@ -39,14 +39,14 @@ ExternalProject_Add(
     -DBUILD_mrpt-graphs=OFF
     -DBUILD_mrpt-graphslam=OFF
     -DBUILD_mrpt-gui=OFF
-    -DBUILD_mrpt-hwdrivers=OFF
+    -DBUILD_mrpt-hwdrivers=ON
     -DBUILD_mrpt-img=OFF
     -DBUILD_mrpt-io=OFF
     -DBUILD_mrpt-kinematics=OFF
     -DBUILD_mrpt-maps=OFF
     -DBUILD_mrpt-math=OFF
     -DBUILD_mrpt-nav=OFF
-    -DBUILD_mrpt-obs=ON
+    -DBUILD_mrpt-obs=OFF
     -DBUILD_mrpt-opengl=OFF
     -DBUILD_mrpt-poses=OFF
     -DBUILD_mrpt-random=OFF
@@ -57,7 +57,7 @@ ExternalProject_Add(
     -DBUILD_mrpt-system=OFF
     -DBUILD_mrpt-tclap=OFF
     -DBUILD_mrpt-tfest=OFF
-    -DBUILD_mrpt-topography=ON
+    -DBUILD_mrpt-topography=OFF
     -DBUILD_mrpt-typemeta=OFF
     -DBUILD_mrpt-vision=OFF
   # no install during build

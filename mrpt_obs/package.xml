@@ -5,7 +5,7 @@
   <!-- Before updating version number, read [MRPT_ROOT]/version_prefix.txt first -->
   <version>2.13.5</version>
   <description>Mobile Robot Programming Toolkit (MRPT) libraries (obs C++ libraries).
-  This package contains: mrpt-obs
+  This package contains: mrpt-obs, mrpt-topography
   </description>
 
   <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
