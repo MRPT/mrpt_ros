@@ -1,8 +1,8 @@
 # ROS wrapper CMake project for these MRPT libraries:
-# mrpt-poses, mrpt-tfest
+# mrpt-gui, nanogui
 
 cmake_minimum_required(VERSION 3.5)
-project(mrpt_poses)
+project(mrpt_gui)
 
 include(ExternalProject)
 
@@ -27,7 +27,7 @@ ExternalProject_Add(
     -DMRPT_BUILD_wxThings=OFF
     -DMRPT_BUILD_rplidar_sdk=OFF
     -DMRPT_BUILD_xsens=OFF
-    -DMRPT_BUILD_nanogui=OFF
+    -DMRPT_BUILD_nanogui=ON  # Build it for this particular package only
     # Libs:
     -DBUILD_mrpt-apps=OFF
     -DBUILD_mrpt-bayes=OFF
@@ -38,7 +38,7 @@ ExternalProject_Add(
     -DBUILD_mrpt-expr=OFF
     -DBUILD_mrpt-graphs=OFF
     -DBUILD_mrpt-graphslam=OFF
-    -DBUILD_mrpt-gui=OFF
+    -DBUILD_mrpt-gui=ON
     -DBUILD_mrpt-hwdrivers=OFF
     -DBUILD_mrpt-img=OFF
     -DBUILD_mrpt-io=OFF
@@ -48,7 +48,7 @@ ExternalProject_Add(
     -DBUILD_mrpt-nav=OFF
     -DBUILD_mrpt-obs=OFF
     -DBUILD_mrpt-opengl=OFF
-    -DBUILD_mrpt-poses=ON
+    -DBUILD_mrpt-poses=OFF
     -DBUILD_mrpt-random=OFF
     -DBUILD_mrpt-ros2bridge=OFF
     -DBUILD_mrpt-rtti=OFF
@@ -56,7 +56,7 @@ ExternalProject_Add(
     -DBUILD_mrpt-slam=OFF
     -DBUILD_mrpt-system=OFF
     -DBUILD_mrpt-tclap=OFF
-    -DBUILD_mrpt-tfest=ON
+    -DBUILD_mrpt-tfest=OFF
     -DBUILD_mrpt-topography=OFF
     -DBUILD_mrpt-typemeta=OFF
     -DBUILD_mrpt-vision=OFF

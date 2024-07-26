@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>mrpt_poses</name>
+  <name>mrpt_opengl</name>
   <!-- Before updating version number, read [MRPT_ROOT]/version_prefix.txt first -->
   <version>2.13.5</version>
-  <description>Mobile Robot Programming Toolkit (MRPT) libraries (poses C++ libraries).
-  This package contains: mrpt-poses, mrpt-tfest
+  <description>Mobile Robot Programming Toolkit (MRPT) libraries (opengl/img C++ libraries).
+  This package contains: mrpt-opengl, mrpt-img
   </description>
 
   <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
@@ -18,7 +18,8 @@
 
   <!-- Deps required by user code (they are in public headers or built as ROS (vs system) packages -->
   <depend>mrpt_base</depend>
-  <depend>mrpt_math</depend>
+  <depend>mrpt_poses</depend>
+
 
   <!-- COMMON DEPS: This ensures we have ROS_DISTRO, etc. env vars -->
   <build_depend>ros_environment</build_depend>
