@@ -31,7 +31,7 @@ your project `package.xml` depending on [what C++ libraries you use](https://doc
 | `<depend>mrpt_libros2bridge</depend>`    | mrpt-ros2bridge |
 | `<depend>mrpt_libslam</depend>`    | mrpt-slam, mrpt-vision |
 | `<depend>mrpt_libtclap</depend>`    | mrpt-tclap |
-| `<depend>mrpt_libapps</depend>`    | Executable [applications](https://docs.mrpt.org/reference/latest/applications.html): RawLogViewer, rawlog-edit, rawlog-grabber, SceneViewer3D, etc. |
+| `<depend>mrpt_apps</depend>`    | Executable [applications](https://docs.mrpt.org/reference/latest/applications.html): RawLogViewer, rawlog-edit, rawlog-grabber, SceneViewer3D, etc. |
 | `<depend>python_mrpt</depend>`    | [pymrpt wrapper](https://docs.mrpt.org/reference/latest/wrappers.html) |
 
 Keep in mind that including one C++ library automatically includes all its dependencies, so you do not need to list them all:
