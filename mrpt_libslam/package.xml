@@ -1,10 +1,12 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>mrpt_apps</name>
+  <name>mrpt_libslam</name>
   <!-- Before updating version number, read [MRPT_ROOT]/version_prefix.txt first -->
   <version>2.13.5</version>
-  <description>Mobile Robot Programming Toolkit (MRPT) applications</description>
+  <description>Mobile Robot Programming Toolkit (MRPT) libraries (slam/vision C++ libraries).
+  This package contains: mrpt-slam, mrpt-vision
+  </description>
 
   <maintainer email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</maintainer>
   <license>BSD</license>
@@ -15,8 +17,7 @@
   <author email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</author>
 
   <!-- Deps required by user code (they are in public headers or built as ROS (vs system) packages -->
-  <depend>mrpt_libapps</depend>
-  <depend>mrpt_libnav</depend>
+  <depend>mrpt_libmaps</depend>
 
   <!-- COMMON DEPS: This ensures we have ROS_DISTRO, etc. env vars -->
   <build_depend>ros_environment</build_depend>

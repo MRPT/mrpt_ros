@@ -17,11 +17,11 @@
   <author email="joseluisblancoc@gmail.com">Jose-Luis Blanco-Claraco</author>
 
   <!-- Deps required by user code (they are in public headers or built as ROS (vs system) packages -->
-  <depend>mrpt_maps</depend>
-  <depend>mrpt_gui</depend>
-  <depend>mrpt_hwdrivers</depend>
-  <depend>mrpt_slam</depend>
-  <depend>mrpt_tclap</depend>
+  <depend>mrpt_libmaps</depend>
+  <depend>mrpt_libgui</depend>
+  <depend>mrpt_libhwdrivers</depend>
+  <depend>mrpt_libslam</depend>
+  <depend>mrpt_libtclap</depend>
 
   <!-- COMMON DEPS: This ensures we have ROS_DISTRO, etc. env vars -->
   <build_depend>ros_environment</build_depend>
@@ -32,7 +32,7 @@
   <build_depend>zlib</build_depend>
 
   <!-- More build deps that are not actually required by this ROS package, but we need them for the mrpt/config.h to reflect we have such feature -->
-  <build_depend>libjpeg</build_depend> <!-- To ensure no built-in version is used -->
+  <build_depend>libjpeg</build_depend>  <!-- To ensure no built-in version is used -->
   <build_depend>glut</build_depend>
   <build_depend>libglfw3-dev</build_depend>
   <build_depend>libxrandr</build_depend>
@@ -68,7 +68,7 @@
   <build_depend condition="$ROS_VERSION == 1">roscpp</build_depend>
   <build_depend condition="$ROS_VERSION == 2">rclcpp</build_depend>
 
-  <!-- for rosbag2rawlog (ROS 1 only, ROS 2 version lives in the mrpt_navigation repository) -->
+  <!-- for rosbag2rawlog (ROS 1 only, ROS 2 version lives in the mrpt_libnavigation repository) -->
   <build_depend condition="$ROS_VERSION == 1">tf2_geometry_msgs</build_depend>
 
   <doc_depend>doxygen</doc_depend>
