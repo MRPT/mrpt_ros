@@ -6,10 +6,21 @@ project(mrpt_libros2bridge)
 
 include(ExternalProject)
 
+#----
+# Extract version from package.xml
+# Example line:" <version>0.3.2</version>"
+file(READ package.xml contentPackageXML)
+string(REGEX MATCH "<version>([0-9\.]*)</version>" _ ${contentPackageXML})
+set(MRPT_VERSION_TO_DOWNLOAD ${CMAKE_MATCH_1})
+message(STATUS "MRPT_VERSION_TO_DOWNLOAD: ${MRPT_VERSION_TO_DOWNLOAD} (detected in package.xml)")
+#----
+
+
 ExternalProject_Add(
   mrpt
   PREFIX ${CMAKE_BINARY_DIR}/mrpt-build
-  SOURCE_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../upstream/
+  GIT_REPOSITORY https://github.com/MRPT/mrpt.git
+  GIT_TAG ${MRPT_VERSION_TO_DOWNLOAD}
   CMAKE_ARGS 
     # Main settings:
     -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
