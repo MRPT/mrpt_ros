@@ -39,7 +39,7 @@ ExternalProject_Add(
     -DMRPT_BUILD_rplidar_sdk=OFF
     -DMRPT_BUILD_xsens=OFF
     -DMRPT_BUILD_nanogui=OFF
-    -DMRPT_INSTALL_CONFIG_HEADERS=ON # only for the base_package
+    -DMRPT_INSTALL_CONFIG_HEADERS=OFF
     # Libs:
     -DBUILD_mrpt-apps=OFF
     -DBUILD_mrpt-bayes=OFF
