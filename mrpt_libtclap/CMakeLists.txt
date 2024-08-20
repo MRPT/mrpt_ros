@@ -40,6 +40,7 @@ ExternalProject_Add(
     -DMRPT_BUILD_xsens=OFF
     -DMRPT_BUILD_nanogui=OFF
     -DMRPT_INSTALL_CONFIG_HEADERS=OFF
+    -DMRPT_INSTALL_EMBEDDED_nanoflann=OFF
     # Libs:
     -DBUILD_mrpt-apps=OFF
     -DBUILD_mrpt-bayes=OFF

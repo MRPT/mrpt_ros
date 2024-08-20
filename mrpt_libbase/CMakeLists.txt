@@ -30,6 +30,8 @@ ExternalProject_Add(
     -DMRPT_INSTALL_EXAMPLES=OFF
     -DMRPT_INSTALL_SHARE_DIRS=OFF
     -DMRPT_BUILD_MANPAGES=OFF
+    -DMRPT_INSTALL_CONFIG_HEADERS=ON        # only for the "libbase" package
+    -DMRPT_INSTALL_EMBEDDED_nanoflann=ON    # only for the "libbase" package
     # Granular builds for each ROS package:
     -DMRPT_BUILD_APPLICATIONS=OFF
     -DMRPT_DISABLE_PYTHON_BINDINGS=ON
@@ -38,7 +40,6 @@ ExternalProject_Add(
     -DMRPT_BUILD_rplidar_sdk=OFF
     -DMRPT_BUILD_xsens=OFF
     -DMRPT_BUILD_nanogui=OFF
-    -DMRPT_INSTALL_CONFIG_HEADERS=ON # only for the base_package
     # Libs:
     -DBUILD_mrpt-apps=OFF
     -DBUILD_mrpt-bayes=OFF
