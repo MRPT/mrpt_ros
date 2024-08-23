@@ -2,8 +2,8 @@
 Changelog for package mrpt_libros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.13.7 (2024-08-23)
+-------------------
 * Change ros bridge package name so it works with both ROS1 and ROS2
 * Contributors: Jose Luis Blanco-Claraco
 
