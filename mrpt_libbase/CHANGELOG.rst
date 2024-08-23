@@ -2,6 +2,9 @@
 Changelog for package mrpt_libbase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.13.6 (2024-08-14)
 -------------------
 * Add lib suffix to package names
