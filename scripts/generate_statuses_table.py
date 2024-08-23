@@ -34,6 +34,7 @@ items_to_remove = ['scripts', 'docs',
                    '.vscode', '.github', '.circleci', '.git']
 pattern_text = \
     "| {name} | "\
+    "[![Build Status](https://build.ros.org/job/Nbin_uF64__{name}__ubuntu_focal_amd64__binary/badge/icon)](https://build.ros.org/job/Nbin_uF64__{name}__ubuntu_focal_amd64__binary/) | "\
     "[![Build Status](https://build.ros2.org/job/Hbin_uJ64__{name}__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__{name}__ubuntu_jammy_amd64__binary/) | "\
     "[![Build Status](https://build.ros2.org/job/Ibin_uJ64__{name}__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Ibin_uJ64__{name}__ubuntu_jammy_amd64__binary/) | "\
     "[![Build Status](https://build.ros2.org/job/Jbin_uN64__{name}__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__{name}__ubuntu_noble_amd64__binary/) |" \

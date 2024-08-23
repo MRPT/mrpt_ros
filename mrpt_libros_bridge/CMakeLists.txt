@@ -2,7 +2,7 @@
 # mrpt-ros2bridge
 
 cmake_minimum_required(VERSION 3.5)
-project(mrpt_libros2bridge)
+project(mrpt_libros_bridge)
 
 include(ExternalProject)
 
@@ -62,7 +62,7 @@ ExternalProject_Add(
     -DBUILD_mrpt-opengl=OFF
     -DBUILD_mrpt-poses=OFF
     -DBUILD_mrpt-random=OFF
-    -DBUILD_mrpt-ros2bridge=ON
+    -DBUILD_mrpt-ros$ENV{ROS_VERSION}bridge=ON          # ROS1 or ROS2
     -DBUILD_mrpt-rtti=OFF
     -DBUILD_mrpt-serialization=OFF
     -DBUILD_mrpt-slam=OFF
