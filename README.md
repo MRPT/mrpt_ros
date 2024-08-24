@@ -29,7 +29,7 @@ your project `package.xml` depending on [what C++ libraries you use](https://doc
 | `<depend>mrpt_libobs</depend>`    | mrpt-obs, mrpt-topography |
 | `<depend>mrpt_libopengl</depend>`    | mrpt-opengl, mrpt-img |
 | `<depend>mrpt_libposes</depend>`    | mrpt-poses, mrpt-tfest, mrpt-bayes |
-| `<depend>mrpt_libros2bridge</depend>`    | mrpt-ros2bridge |
+| `<depend>mrpt_libros_bridge</depend>`    | mrpt-ros2bridge |
 | `<depend>mrpt_libslam</depend>`    | mrpt-slam, mrpt-vision |
 | `<depend>mrpt_libtclap</depend>`    | mrpt-tclap |
 | `<depend>mrpt_apps</depend>`    | Executable [applications](https://docs.mrpt.org/reference/latest/applications.html): RawLogViewer, rawlog-edit, rawlog-grabber, SceneViewer3D, etc. |

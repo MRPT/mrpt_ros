@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>mrpt_libros2bridge</name>
+  <name>mrpt_libros_bridge</name>
   <!-- Before updating version number, read [MRPT_ROOT]/version_prefix.txt first -->
   <version>2.13.7</version>
   <description>Mobile Robot Programming Toolkit (MRPT) libraries (ros2bridge C++ library).
