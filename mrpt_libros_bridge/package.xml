@@ -57,6 +57,13 @@
   <build_depend>cv_bridge</build_depend>
   <build_depend>libopencv-dev</build_depend>
   <build_depend>liboctomap-dev</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>stereo_msgs</build_depend>
+  <build_depend>tf2</build_depend>
+
   <!--<depend>pcl_conversions</depend> WAS: To run unit tests only -->
 
   <build_depend condition="$ROS_VERSION == 1">rosbag_storage</build_depend>
