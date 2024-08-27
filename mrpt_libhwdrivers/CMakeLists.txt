@@ -15,14 +15,29 @@ set(MRPT_VERSION_TO_DOWNLOAD ${CMAKE_MATCH_1})
 message(STATUS "MRPT_VERSION_TO_DOWNLOAD: ${MRPT_VERSION_TO_DOWNLOAD} (detected in package.xml)")
 #----
 
+# For local builds, avoid the waste of time and disk of cloning mrpt within each package,
+# which makes sense only in build farms:
+# --------------------------------------------------------------------------------------------
+if (EXISTS ${CMAKE_BINARY_DIR}/../mrpt_libbase/mrpt-build/src/mrpt/CMakeLists.txt AND NOT "$ENV{HOME}" STREQUAL "/home/buildfarm")
+  # reuse existing cloned version:
+  set(src_cmds
+    SOURCE_DIR ${CMAKE_BINARY_DIR}/../mrpt_libbase/mrpt-build/src/mrpt/
+  )
+else()
+  # Default: clone from github:
+  set(src_cmds
+    GIT_REPOSITORY https://github.com/MRPT/mrpt.git
+    GIT_TAG ${MRPT_VERSION_TO_DOWNLOAD}
+  )
+endif()
 
+# EP:
+# -------------------------------
 ExternalProject_Add(
   mrpt
   PREFIX ${CMAKE_BINARY_DIR}/mrpt-build
-  GIT_REPOSITORY https://github.com/MRPT/mrpt.git
-  GIT_TAG ${MRPT_VERSION_TO_DOWNLOAD}
-
-  CMAKE_ARGS 
+  ${src_cmds}
+  CMAKE_ARGS
     # Main settings:
     -DCMAKE_INSTALL_PREFIX=${CMAKE_INSTALL_PREFIX}
     -DCMAKE_BUILD_TYPE=${CMAKE_BUILD_TYPE}

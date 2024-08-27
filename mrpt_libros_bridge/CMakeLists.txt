@@ -18,7 +18,7 @@ message(STATUS "MRPT_VERSION_TO_DOWNLOAD: ${MRPT_VERSION_TO_DOWNLOAD} (detected 
 # For local builds, avoid the waste of time and disk of cloning mrpt within each package,
 # which makes sense only in build farms:
 # --------------------------------------------------------------------------------------------
-if (EXISTS ${CMAKE_BINARY_DIR}/../mrpt_libbase/mrpt-build/src/mrpt/CMakeLists.txt)
+if (EXISTS ${CMAKE_BINARY_DIR}/../mrpt_libbase/mrpt-build/src/mrpt/CMakeLists.txt AND NOT "$ENV{HOME}" STREQUAL "/home/buildfarm")
   # reuse existing cloned version:
   set(src_cmds
     SOURCE_DIR ${CMAKE_BINARY_DIR}/../mrpt_libbase/mrpt-build/src/mrpt/
