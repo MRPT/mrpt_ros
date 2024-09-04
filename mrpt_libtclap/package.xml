@@ -27,6 +27,9 @@
   <build_depend>pkg-config</build_depend>
   <build_depend>zlib</build_depend>
 
+  <!-- fake dep to avoid parallel local builds in colcon (problematic due to the trick of reusing the cloned mrpt sources between repos) -->
+  <build_depend>libmrpt_base</build_depend>
+
   <!-- More build deps that are not actually required by this ROS package, but we need them for the mrpt/config.h to reflect we have such feature -->
   <build_depend>eigen</build_depend>  <!-- To ensure no built-in version is used -->
   <build_depend>libjpeg</build_depend>  <!-- To ensure no built-in version is used -->
