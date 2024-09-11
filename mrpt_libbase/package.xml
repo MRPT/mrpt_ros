@@ -45,6 +45,7 @@
   <build_depend>libusb-1.0-dev</build_depend>
   <build_depend>pybind11-dev</build_depend>
   <build_depend>python3-pip</build_depend>
+  <build_depend>tbb</build_depend>
   <build_depend>tinyxml2</build_depend>
   <build_depend>wx-common</build_depend>
   <build_depend>wxwidgets</build_depend>

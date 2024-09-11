@@ -19,6 +19,8 @@
   <!-- Deps required by user code (they are in public headers or built as ROS (vs system) packages -->
   <depend>mrpt_libmaps</depend>
 
+  <depend>tbb</depend> <!-- Required by clients too since MRPT>=2.14.0 -->
+
   <!-- COMMON DEPS: This ensures we have ROS_DISTRO, etc. env vars -->
   <build_depend>ros_environment</build_depend>
 
