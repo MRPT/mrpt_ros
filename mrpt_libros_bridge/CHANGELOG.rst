@@ -2,8 +2,8 @@
 Changelog for package mrpt_libros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.1 (2024-09-24)
+-------------------
 * Handle PointCloud2 with uint32 timestamps, interpreted as nanoseconds.
 
 2.13.7 (2024-08-23)
