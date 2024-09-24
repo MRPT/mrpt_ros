@@ -2,6 +2,10 @@
 Changelog for package mrpt_libros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Handle PointCloud2 with uint32 timestamps, interpreted as nanoseconds.
+
 2.13.7 (2024-08-23)
 -------------------
 * Change ros bridge package name so it works with both ROS1 and ROS2
