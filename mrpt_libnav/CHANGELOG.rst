@@ -2,8 +2,8 @@
 Changelog for package mrpt_libnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.2 (2024-10-05)
+-------------------
 * Add support for override_mrpt_version for local builds
 * Add generic internalState to PTGs.
 * Contributors: Jose Luis Blanco-Claraco

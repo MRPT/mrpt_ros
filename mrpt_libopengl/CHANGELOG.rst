@@ -2,8 +2,8 @@
 Changelog for package mrpt_libopengl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.2 (2024-10-05)
+-------------------
 * Add support for override_mrpt_version for local builds
 * mrpt::opengl::CMesh: Remove the annoying warning "Texture image and Z matrix have different sizes"
 * Contributors: Jose Luis Blanco-Claraco
