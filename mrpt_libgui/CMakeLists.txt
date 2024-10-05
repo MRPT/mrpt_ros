@@ -8,11 +8,20 @@ include(ExternalProject)
 #----
 # Extract version from package.xml
 # Example line:" <version>0.3.2</version>"
-file(READ package.xml contentPackageXML)
-string(REGEX MATCH "<version>([0-9\.]*)</version>" _ ${contentPackageXML})
-set(MRPT_VERSION_TO_DOWNLOAD ${CMAKE_MATCH_1})
-message(STATUS "MRPT_VERSION_TO_DOWNLOAD: ${MRPT_VERSION_TO_DOWNLOAD} (detected in package.xml)")
+if(EXISTS ${CMAKE_CURRENT_LIST_DIR}/../override_mrpt_version.cmake)
+  include(${CMAKE_CURRENT_LIST_DIR}/../override_mrpt_version.cmake REQUIRED)
+endif()
+if(NOT MRPT_VERSION_TO_DOWNLOAD)
+  file(READ package.xml contentPackageXML)
+  string(REGEX MATCH "<version>([0-9\.]*)</version>" _ ${contentPackageXML})
+  set(MRPT_VERSION_TO_DOWNLOAD ${CMAKE_MATCH_1})
+  set(_VERSION_SRC "(detected in package.xml)")
+else()
+set(_VERSION_SRC "(***OVERRIDEN VERSION***)")
+endif()
+message(STATUS "MRPT_VERSION_TO_DOWNLOAD: ${MRPT_VERSION_TO_DOWNLOAD} ${_VERSION_SRC}")
 #----
+
 
 # For local builds, avoid the waste of time and disk of cloning mrpt within each package,
 # which makes sense only in build farms:

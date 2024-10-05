@@ -9,16 +9,31 @@ include(ExternalProject)
 #----
 # Extract version from package.xml
 # Example line:" <version>0.3.2</version>"
-file(READ package.xml contentPackageXML)
-string(REGEX MATCH "<version>([0-9\.]*)</version>" _ ${contentPackageXML})
-set(MRPT_VERSION_TO_DOWNLOAD ${CMAKE_MATCH_1})
-message(STATUS "MRPT_VERSION_TO_DOWNLOAD: ${MRPT_VERSION_TO_DOWNLOAD} (detected in package.xml)")
+if(EXISTS ${CMAKE_CURRENT_LIST_DIR}/../override_mrpt_version.cmake)
+  include(${CMAKE_CURRENT_LIST_DIR}/../override_mrpt_version.cmake REQUIRED)
+endif()
+if(NOT MRPT_VERSION_TO_DOWNLOAD)
+  file(READ package.xml contentPackageXML)
+  string(REGEX MATCH "<version>([0-9\.]*)</version>" _ ${contentPackageXML})
+  set(MRPT_VERSION_TO_DOWNLOAD ${CMAKE_MATCH_1})
+  set(_VERSION_SRC "(detected in package.xml)")
+else()
+set(_VERSION_SRC "(***OVERRIDEN VERSION***)")
+endif()
+message(STATUS "MRPT_VERSION_TO_DOWNLOAD: ${MRPT_VERSION_TO_DOWNLOAD} ${_VERSION_SRC}")
+#----
+
+#----
+set(VERSION_CACHE ${CMAKE_BINARY_DIR}/../mrpt_libbase/mrpt-build/MRPT_VERSION_TO_DOWNLOAD.txt)
+if(EXISTS ${VERSION_CACHE})
+  file(READ ${VERSION_CACHE} CURRENT_DOWNLOADED_MRPT_VERSION)
+endif()
 #----
 
 # For local builds, avoid the waste of time and disk of cloning mrpt within each package,
 # which makes sense only in build farms:
 # --------------------------------------------------------------------------------------------
-if (EXISTS ${CMAKE_BINARY_DIR}/../mrpt_libbase/mrpt-build/src/mrpt/CMakeLists.txt AND NOT "$ENV{HOME}" STREQUAL "/home/buildfarm")
+if (EXISTS ${CMAKE_BINARY_DIR}/../mrpt_libbase/mrpt-build/src/mrpt/CMakeLists.txt AND (NOT "$ENV{HOME}" STREQUAL "/home/buildfarm") AND "${CURRENT_DOWNLOADED_MRPT_VERSION}" STREQUAL "${MRPT_VERSION_TO_DOWNLOAD}")
   # reuse existing cloned version:
   set(src_cmds
     SOURCE_DIR ${CMAKE_BINARY_DIR}/../mrpt_libbase/mrpt-build/src/mrpt/
@@ -30,6 +45,7 @@ else()
     GIT_TAG ${MRPT_VERSION_TO_DOWNLOAD}
   )
 endif()
+file(WRITE ${VERSION_CACHE} ${MRPT_VERSION_TO_DOWNLOAD})
 
 # EP:
 # -------------------------------
