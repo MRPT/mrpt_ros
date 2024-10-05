@@ -2,6 +2,11 @@
 Changelog for package mrpt_libslam
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add support for override_mrpt_version for local builds
+* Contributors: Jose Luis Blanco-Claraco
+
 2.14.1 (2024-09-24)
 -------------------
 

@@ -2,6 +2,12 @@
 Changelog for package mrpt_libopengl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Add support for override_mrpt_version for local builds
+* mrpt::opengl::CMesh: Remove the annoying warning "Texture image and Z matrix have different sizes"
+* Contributors: Jose Luis Blanco-Claraco
+
 2.14.1 (2024-09-24)
 -------------------
 * New method mrpt::opengl::CAssimpModel::split_triangles_rendering_bbox() to enable a new feature in Assimp 3D models: splitting into smaller triangle sets for correct z-ordering of semitransparent objects; e.g. required for trees with masked leaves.
