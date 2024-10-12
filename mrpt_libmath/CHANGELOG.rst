@@ -2,6 +2,10 @@
 Changelog for package mrpt_libmath
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* mrpt::math::TPose2D and mrpt::math::TPose3D constructors from points are marked as explicit.
+
 2.14.2 (2024-10-05)
 -------------------
 * Add support for override_mrpt_version for local builds

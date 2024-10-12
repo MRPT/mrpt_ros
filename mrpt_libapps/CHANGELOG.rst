@@ -2,6 +2,9 @@
 Changelog for package mrpt_libapps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.14.2 (2024-10-05)
 -------------------
 * Add support for override_mrpt_version for local builds

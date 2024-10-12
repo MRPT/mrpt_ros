@@ -2,6 +2,10 @@
 Changelog for package mrpt_libros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Convert from MRPT occupancy grids to ROS: Add new optional parameter to interpret grid maps as cost maps.
+
 2.14.2 (2024-10-05)
 -------------------
 * Add support for override_mrpt_version for local builds
