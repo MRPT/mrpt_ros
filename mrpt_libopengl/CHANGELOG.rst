@@ -2,8 +2,8 @@
 Changelog for package mrpt_libopengl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.3 (2024-10-12)
+-------------------
 * mrpt::img::CImage::rotateImage(): Special angles 90,-90, 180 are handled as expected with a quick image transformation and rotation.
 
 2.14.2 (2024-10-05)

@@ -2,8 +2,8 @@
 Changelog for package mrpt_libnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.3 (2024-10-12)
+-------------------
 * mrpt::nav::CWaypointsNavigator: New parameter "minimum_target_approach_per_step" and feature to keep approaching waypoints until no significant improvement is done.
 * mrpt::nav::CHolonomicFullEval: Rewritten TP-Space data structures so the target heading is visible to holonomic evaluator algorithms. Added a new weight [7] related to correct alignment at target. All RNAV INI files have been updated accordingly.
 
