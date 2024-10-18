@@ -55,7 +55,7 @@ ExternalProject_Add(
     -DMRPT_BUILD_MANPAGES=OFF
     -DMRPT_INSTALL_CONFIG_HEADERS=OFF
     -DMRPT_INSTALL_EMBEDDED_nanoflann=OFF
-    -DDISABLE_ROS=ON # save cmake configure time
+    -DDISABLE_ROS=OFF # We need ROS in mrpt_apps for ROS1 to build rosbag2rawlog app
     # Granular builds for each ROS package:
     -DMRPT_BUILD_APPLICATIONS=ON
     -DMRPT_DISABLE_PYTHON_BINDINGS=ON
