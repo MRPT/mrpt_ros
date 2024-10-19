@@ -2,8 +2,8 @@
 Changelog for package mrpt_apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.4 (2024-10-19)
+-------------------
 * package.xml and cmake: Fix generation of rosbag2rawlog for ROS 1 version of package mrpt_apps
 * rosbag2rawlog: Fix detection of mrpt-ros1bridge when built within mrpt_ros ROS packaging.
 * Contributors: Jose Luis Blanco-Claraco
