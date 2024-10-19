@@ -2,6 +2,10 @@
 Changelog for package mrpt_libnav
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* mrpt::nav::CAbstractPTGBasedReactive: Missing heading information in recently-added TP-Space targets as TPose2D.
+
 2.14.3 (2024-10-12)
 -------------------
 * mrpt::nav::CWaypointsNavigator: New parameter "minimum_target_approach_per_step" and feature to keep approaching waypoints until no significant improvement is done.

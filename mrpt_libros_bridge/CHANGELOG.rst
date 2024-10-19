@@ -2,6 +2,11 @@
 Changelog for package mrpt_libros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* package.xml and cmake: Fix generation of rosbag2rawlog for ROS 1 version of package mrpt_apps
+* Contributors: Jose Luis Blanco-Claraco
+
 2.14.3 (2024-10-12)
 -------------------
 * Convert from MRPT occupancy grids to ROS: Add new optional parameter to interpret grid maps as cost maps.
