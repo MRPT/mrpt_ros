@@ -2,8 +2,8 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.5 (2024-11-05)
+-------------------
 * mrpt::maps::CPointsMapXYZIRT::getPointRGB() now handles the case of no intensity without throwing, fixing the visualization of such clouds through mrpt::opengl::CPointCloudColoured::loadFromPointsMap().
 
 2.14.4 (2024-10-19)

@@ -2,8 +2,8 @@
 Changelog for package mrpt_libmath
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.5 (2024-11-05)
+-------------------
 * Upgraded nanoflann to v1.6.2 (fixes a potential bug).
 
 2.14.4 (2024-10-19)
