@@ -2,6 +2,10 @@
 Changelog for package mrpt_libbase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* ExprTk updated to latest version (https://www.partow.net/programming/exprtk/exprtk_release_notes_v0.0.3.txt).
+
 2.14.4 (2024-10-19)
 -------------------
 
