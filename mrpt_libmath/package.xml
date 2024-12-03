@@ -3,7 +3,7 @@
 <package format="3">
   <name>mrpt_libmath</name>
   <!-- Before updating version number, read [MRPT_ROOT]/version_prefix.txt first -->
-  <version>2.14.5</version>
+  <version>2.14.6</version>
   <description>Mobile Robot Programming Toolkit (MRPT) libraries (math C++ libraries).
   This package contains: mrpt-math
   </description>
