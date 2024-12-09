@@ -2,6 +2,10 @@
 Changelog for package mrpt_libbase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* `mrpt-*-config.cmake` files now enforce the search of cmake dependencies in CONFIG mode, to avoid being foolish by deprecated `FindXXX()` lying around.
+
 2.14.5 (2024-11-05)
 -------------------
 * ExprTk updated to latest version (https://www.partow.net/programming/exprtk/exprtk_release_notes_v0.0.3.txt).
