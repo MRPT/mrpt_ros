@@ -2,8 +2,8 @@
 Changelog for package mrpt_apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.8 (2025-04-25)
+-------------------
 * Fix RawLogViewer ICP module.
 
 2.14.7 (2024-12-09)
