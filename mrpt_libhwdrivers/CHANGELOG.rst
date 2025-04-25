@@ -2,6 +2,10 @@
 Changelog for package mrpt_libhwdrivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* CCameraSensor would crash at the end of the video file.
+
 2.14.7 (2024-12-09)
 -------------------
 

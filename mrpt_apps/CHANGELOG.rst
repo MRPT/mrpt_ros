@@ -2,6 +2,10 @@
 Changelog for package mrpt_apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix RawLogViewer ICP module.
+
 2.14.7 (2024-12-09)
 -------------------
 * rosbag2rawlog (ROS1): Implement conversion of NavSatFix -> mrpt::obs::CObservationGPS
