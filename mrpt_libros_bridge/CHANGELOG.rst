@@ -2,8 +2,8 @@
 Changelog for package mrpt_libros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.10 (2025-05-23)
+--------------------
 * FIX: Fix build in ROS rolling: Unknown CMake command "ament_target_dependencies".
 
 2.14.9 (2025-05-17)
