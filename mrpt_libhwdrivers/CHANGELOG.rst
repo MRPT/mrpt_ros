@@ -2,6 +2,9 @@
 Changelog for package mrpt_libhwdrivers
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.14.10 (2025-05-23)
 --------------------
 
