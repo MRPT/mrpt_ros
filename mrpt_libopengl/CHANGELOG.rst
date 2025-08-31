@@ -2,8 +2,8 @@
 Changelog for package mrpt_libopengl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.12 (2025-08-31)
+--------------------
 * New method mrpt::opengl::CPointCloudColoured::setAllPointsAlpha().
 
 2.14.11 (2025-05-31)
