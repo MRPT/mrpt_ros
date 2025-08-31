@@ -2,6 +2,9 @@
 Changelog for package mrpt_libros_bridge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.14.11 (2025-05-31)
 --------------------
 * Fix build against all tf2 versions in all active ROS 2 distributions.
