@@ -2,6 +2,10 @@
 Changelog for package mrpt_libmath
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* New classes mrpt::math::TOrientedBox, mrpt::math::TOrientedBoxf
+
 2.14.12 (2025-08-31)
 --------------------
 

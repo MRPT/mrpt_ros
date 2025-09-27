@@ -2,6 +2,11 @@
 Changelog for package mrpt_libopengl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Harden opengl unit tests against crashes on non-GPU runners.
+* Fix mrpt::opengl::CEllipsoid3D wrong direction.
+
 2.14.12 (2025-08-31)
 --------------------
 * New method mrpt::opengl::CPointCloudColoured::setAllPointsAlpha().
