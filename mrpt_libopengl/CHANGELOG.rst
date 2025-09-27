@@ -2,8 +2,8 @@
 Changelog for package mrpt_libopengl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.14.14 (2025-09-27)
+--------------------
 * Fixed opengl unit tests against crashes under some build flags.
 * Fix mrpt::opengl::CEllipsoid3D wrong direction.
 
