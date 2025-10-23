@@ -56,7 +56,6 @@ ExternalProject_Add(
     -DMRPT_BUILD_MANPAGES=OFF
     -DMRPT_INSTALL_CONFIG_HEADERS=OFF
     -DMRPT_INSTALL_EMBEDDED_nanoflann=OFF
-    -DDISABLE_ROS=ON # save cmake configure time
     # Granular builds for each ROS package:
     -DMRPT_BUILD_APPLICATIONS=OFF
     -DMRPT_DISABLE_PYTHON_BINDINGS=ON

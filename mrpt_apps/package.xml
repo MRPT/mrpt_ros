@@ -18,8 +18,7 @@
   <depend>mrpt_libapps</depend>
   <depend>mrpt_libnav</depend>
 
-  <!-- COMMON DEPS: This ensures we have ROS_DISTRO, etc. env vars -->
-  <build_depend>ros_environment</build_depend>
+
 
   <!-- Deps required by building only -->
   <!-- <build_depend condition="$ROS_VERSION == 2">libfyaml-dev</build_depend> -->  <!-- Removed since not packaged for non-Debian platforms -->
