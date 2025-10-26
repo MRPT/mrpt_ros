@@ -2,6 +2,12 @@
 Changelog for package mrpt_apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove deps on ROS message packages, following the removal of mrpt-ros bridge into its own repository
+* RawLogViewer:  Show stats for mrpt::maps::CGenericPoinsMap. GUI options to colorize clouds by any point cloud field.
+* Contributors: Jose Luis Blanco-Claraco
+
 2.14.16 (2025-10-15)
 --------------------
 

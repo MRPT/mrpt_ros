@@ -2,6 +2,13 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove deps on ROS message packages, following the removal of mrpt-ros bridge into its own repository
+* Add new mrpt::maps::CGenericPointsMap
+* Refactor around mrpt::maps::CPointsMap for more efficient generic insertion of maps in others with arbitrary per-point fields.
+* Contributors: Jose Luis Blanco-Claraco
+
 2.14.16 (2025-10-15)
 --------------------
 
