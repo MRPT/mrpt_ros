@@ -2,8 +2,8 @@
 Changelog for package mrpt_libbase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.15.0 (2025-10-26)
+-------------------
 * Remove deps on ROS message packages, following the removal of mrpt-ros bridge into its own repository
 * Contributors: Jose Luis Blanco-Claraco
 
