@@ -2,8 +2,8 @@
 Changelog for package mrpt_libbase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.15.1 (2025-10-29)
+-------------------
 * Remove obsolete BUILD_ros2bridge cmake variable
 * Add missing opencv dependency after removal of cv_bridge
 * Contributors: Jose Luis Blanco-Claraco
