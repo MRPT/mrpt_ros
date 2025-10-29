@@ -2,6 +2,12 @@
 Changelog for package mrpt_libopengl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Remove obsolete BUILD_ros2bridge cmake variable
+* Add missing opencv dependency after removal of cv_bridge
+* Contributors: Jose Luis Blanco-Claraco
+
 2.15.0 (2025-10-26)
 -------------------
 * Remove deps on ROS message packages, following the removal of mrpt-ros bridge into its own repository
