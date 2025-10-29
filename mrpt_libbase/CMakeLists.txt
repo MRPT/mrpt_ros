@@ -94,7 +94,6 @@ ExternalProject_Add(
     -DBUILD_mrpt-opengl=OFF
     -DBUILD_mrpt-poses=OFF
     -DBUILD_mrpt-random=ON
-    -DBUILD_mrpt-ros$ENV{ROS_VERSION}bridge=OFF     # ROS1 or ROS2
     -DBUILD_mrpt-rtti=ON
     -DBUILD_mrpt-serialization=ON
     -DBUILD_mrpt-slam=OFF
