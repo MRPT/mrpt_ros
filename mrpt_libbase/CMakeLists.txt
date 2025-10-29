@@ -62,6 +62,7 @@ ExternalProject_Add(
     -DMRPT_INSTALL_EXAMPLES=OFF
     -DMRPT_INSTALL_SHARE_DIRS=OFF
     -DMRPT_BUILD_MANPAGES=OFF
+    -DMRPT_BUILD_TESTING=OFF
     -DMRPT_INSTALL_CONFIG_HEADERS=ON        # only for the "libbase" package
     -DMRPT_INSTALL_EMBEDDED_nanoflann=ON    # only for the "libbase" package
     # Granular builds for each ROS package:
