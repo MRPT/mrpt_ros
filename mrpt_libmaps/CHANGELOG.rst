@@ -2,8 +2,8 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.15.2 (2025-11-21)
+-------------------
 * mrpt::maps::CGenericPointsMap now supports fields of type `double` too.
 * Merge pull request `#5 <https://github.com/MRPT/mrpt_ros/issues/5>`_ from wentasah/readd-octomap
   libmaps: Depend on liboctomap-dev
