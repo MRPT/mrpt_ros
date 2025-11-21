@@ -2,6 +2,20 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* mrpt::maps::CGenericPointsMap now supports fields of type `double` too.
+* Merge pull request `#5 <https://github.com/MRPT/mrpt_ros/issues/5>`_ from wentasah/readd-octomap
+  libmaps: Depend on liboctomap-dev
+* libmaps: Depend on liboctomap-dev
+  Dependency on liboctomap-dev was removed in commit e94c04e ("Remove
+  deps on ROS message packages, following the removal of mrpt-ros bridge
+  into its own repository", 2025-10-23), but libmaps needs octomap to
+  build. Otherwise, the following error message is printed:
+  /build/mrpt-build/src/mrpt/libs/maps/src/maps/COctoMap.cpp:18:10:
+  fatal error: octomap/OcTree.h: No such file or directory
+* Contributors: Jose Luis Blanco-Claraco, Michal Sojka
+
 2.15.1 (2025-10-29)
 -------------------
 * Remove obsolete BUILD_ros2bridge cmake variable

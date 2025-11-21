@@ -2,6 +2,9 @@
 Changelog for package mrpt_libmath
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.15.1 (2025-10-29)
 -------------------
 * Remove obsolete BUILD_ros2bridge cmake variable
