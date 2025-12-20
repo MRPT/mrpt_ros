@@ -2,6 +2,10 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Clean up mrpt-maps, modernize API, mark deprecated classes for 2.15.3 for deletion on 3.0.0 by @jlblancoc in https://github.com/MRPT/mrpt/pull/1348
+
 2.15.2 (2025-11-21)
 -------------------
 * mrpt::maps::CGenericPointsMap now supports fields of type `double` too.
