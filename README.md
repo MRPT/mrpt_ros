@@ -58,6 +58,11 @@ clone this repo and build with colcon as usual:
 ```bash
 cd ~/ros2_ws/src
 git clone --recursive https://github.com/MRPT/mrpt_ros.git
+
+cd ~/ros2_ws/
+rosdep install --from-paths src --ignore-src -r -y
+
+colcon build --symlink-install --parallel-workers 2 --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
 ```
 
 ## Build status matrix
