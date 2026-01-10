@@ -2,6 +2,9 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+
 2.15.4 (2025-12-26)
 -------------------
 * Bug fixes:  Fix regression in mrpt::obs::recolorize3Dpc()

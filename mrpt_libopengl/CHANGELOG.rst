@@ -2,6 +2,10 @@
 Changelog for package mrpt_libopengl
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Bug fix: Workaround to opengl crashes in Ubuntu 26.04 (similar to Debian bug https://bugs.debian.org/1115155)
+
 2.15.4 (2025-12-26)
 -------------------
 
