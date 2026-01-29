@@ -2,8 +2,8 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.15.6 (2026-01-29)
+-------------------
 * All point cloud classes: now gets per-point timestamps from 2D LiDAR range scans.
 
 2.15.5 (2026-01-10)
