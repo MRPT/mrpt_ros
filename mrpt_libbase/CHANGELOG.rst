@@ -2,8 +2,8 @@
 Changelog for package mrpt_libbase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.15.7 (2026-02-03)
+-------------------
 * Support for ZStd compression with mrpt::io::CCompressedInputStream and mrpt::io::CCompressedOutputStream
 * Add new build dep on libzstd-dev
 * Contributors: Jose Luis Blanco-Claraco
