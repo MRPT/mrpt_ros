@@ -2,8 +2,8 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.15.13 (2026-04-14)
+--------------------
 * mrpt::maps::CPointsMap now pads with zeros if trying to insert a source point clouds with less fields than the target.
 * mrpt::obs::recolorize3Dpc(): Add optional outlier removal parameter
 
