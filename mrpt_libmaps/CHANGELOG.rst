@@ -2,6 +2,11 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* mrpt::maps::CPointsMap now pads with zeros if trying to insert a source point clouds with less fields than the target.
+* mrpt::obs::recolorize3Dpc(): Add optional outlier removal parameter
+
 2.15.12 (2026-04-06)
 --------------------
 * CRITICAL FIX: safer multithread handling of string_views in CGenericPointsMap
