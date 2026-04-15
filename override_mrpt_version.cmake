@@ -4,4 +4,4 @@
 # Uncomment the next line to enforce using a particular
 # MRPT version (branch name, git tag):
 
-#set(MRPT_VERSION_TO_DOWNLOAD "develop")
+#set(MRPT_VERSION_TO_DOWNLOAD "2.x")
