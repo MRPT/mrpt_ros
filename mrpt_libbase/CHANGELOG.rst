@@ -2,6 +2,10 @@
 Changelog for package mrpt_libbase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Fix build with g++16 
+
 2.15.13 (2026-04-14)
 --------------------
 
