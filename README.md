@@ -10,79 +10,12 @@
 | ROS 1 Noetic @ u20.04 | [![Version](https://img.shields.io/ros/v/noetic/mrpt_ros)](https://index.ros.org/?pkgs=mrpt_ros&search_packages=true#noetic) |
 | ROS 2 Iron (u22.04) | [![Version](https://img.shields.io/ros/v/iron/mrpt_ros)](https://index.ros.org/search/?term=mrpt_ros) |
 
+# DEPRECATED: Move to `mrpt3` as of May-2026
 
 # mrpt-ros
 Fine-grained ROS packages for MRPT libraries and apps. This repository is a replacement for
 the usage of the [upstream MRPT/mrpt](https://github.com/MRPT/mrpt) repo directly as the ROS
 package `mrpt2`.
-
-## Mapping between ROS packages <==> MRPT C++ libraries
-
-These are the `<depend>...</depend>` tags you need to include in
-your project `package.xml` depending on [what C++ libraries you use](https://docs.mrpt.org/reference/latest/modules.html):
-
-| ROS 2 package name  | Included MRPT libraries |
-|---|---|
-| `<depend>mrpt_libbase</depend>`    | mrpt-io, mrpt-serialization, mrpt-random, mrpt-system, mrpt-rtti, mrpt-containers, mrpt-typemeta, mrpt-core, mrpt-random, mrpt-config, mrpt-expr |
-| `<depend>mrpt_libgui</depend>`    | mrpt-gui |
-| `<depend>mrpt_libhwdrivers</depend>`    | mrpt-hwdrivers, mrpt-comms |
-| `<depend>mrpt_libapps</depend>`    | mrpt-apps |
-| `<depend>mrpt_libmaps</depend>`    | mrpt-maps, mrpt-graphs |
-| `<depend>mrpt_libmath</depend>`    | mrpt-math |
-| `<depend>mrpt_libnav</depend>`    | mrpt-nav, mrpt-kinematics |
-| `<depend>mrpt_libobs</depend>`    | mrpt-obs, mrpt-topography |
-| `<depend>mrpt_libopengl</depend>`    | mrpt-opengl, mrpt-img |
-| `<depend>mrpt_libposes</depend>`    | mrpt-poses, mrpt-tfest, mrpt-bayes |
-| `<depend>mrpt_libros_bridge</depend>`    | mrpt-ros2bridge (Moved to its own repo) |
-| `<depend>mrpt_libslam</depend>`    | mrpt-slam, mrpt-vision |
-| `<depend>mrpt_libtclap</depend>`    | mrpt-tclap |
-| `<depend>mrpt_apps</depend>`    | Executable [applications](https://docs.mrpt.org/reference/latest/applications.html): RawLogViewer, rawlog-edit, rawlog-grabber, SceneViewer3D, etc. |
-| `<depend>python_mrpt</depend>`    | [pymrpt wrapper](https://docs.mrpt.org/reference/latest/wrappers.html) |
-
-Keep in mind that including one C++ library automatically includes all its dependencies, so you do not need to list them all:
-
-![mrpt_libs](docs/graph_mrpt_libs.png)
-
-## Usage
-
-To get binary packages via `apt install` from the ROS build farm,
-install required packages like:
-
-```bash
-sudo apt install ros-${ROS_DISTRO}-mrpt-libbase  # or any other as needed
-```
-
-Alternatively, if you need to build MRPT from sources (active MRPT developers & testers only),
-clone this repo and build with colcon as usual:
-
-```bash
-cd ~/ros2_ws/src
-git clone --recursive https://github.com/MRPT/mrpt_ros.git
-
-cd ~/ros2_ws/
-rosdep install --from-paths src --ignore-src -r -y
-
-colcon build --symlink-install --parallel-workers 2 --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
-```
-
-## Build status matrix
-
-| Package |  ROS 2 Humble <br/> BinBuild |  ROS 2 Jazzy <br/> BinBuild | ROS 2 Kilted <br/> BinBuild | ROS 2 Rolling <br/> BinBuild |
-| --- | --- | --- |--- |--- |
-| mrpt_apps | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_apps__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_apps__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/) |
-| mrpt_libapps | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libapps__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libapps__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/) |
-| mrpt_libbase | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libbase__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libbase__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/) |
-| mrpt_libgui | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libgui__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libgui__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/) |
-| mrpt_libhwdrivers | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libhwdrivers__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libhwdrivers__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/) |
-| mrpt_libmaps | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libmaps__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libmaps__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/) |
-| mrpt_libmath | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libmath__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libmath__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/) |
-| mrpt_libnav | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libnav__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libnav__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/) |
-| mrpt_libobs | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libobs__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libobs__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/) |
-| mrpt_libopengl | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libopengl__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libopengl__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/) |
-| mrpt_libposes | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libposes__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libposes__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/) |
-| mrpt_libslam | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libslam__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libslam__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/) |
-| mrpt_libtclap | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libtclap__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libtclap__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/) |
-
 
 ## Migration guide: `mrpt_ros` (MRPT 2.x) → native MRPT 3.x packages
 
@@ -100,7 +33,7 @@ Replace every `<depend>mrpt_lib*</depend>` with the fine-grained module(s) actua
 
 | `mrpt_ros` (2.x) | MRPT 3.x native packages |
 |---|---|
-| `mrpt_libbase`    | `mrpt_core` (pulls in `mrpt_io`, `mrpt_serialization`, `mrpt_system`, `mrpt_rtti`, `mrpt_containers`, `mrpt_typemeta`, `mrpt_random`, `mrpt_config`, `mrpt_expr` transitively) |
+| `mrpt_libbase`    | `mrpt_io`, `mrpt_serialization`, `mrpt_system`, `mrpt_rtti`, `mrpt_containers`, `mrpt_typemeta`, `mrpt_random`, `mrpt_config`, `mrpt_expr` |
 | `mrpt_libmath`    | `mrpt_math` |
 | `mrpt_libposes`   | `mrpt_poses` (+ `mrpt_tfest`, `mrpt_bayes` if used) |
 | `mrpt_libobs`     | `mrpt_obs` (+ `mrpt_topography` if used) |
@@ -111,7 +44,7 @@ Replace every `<depend>mrpt_lib*</depend>` with the fine-grained module(s) actua
 | `mrpt_libslam`    | `mrpt_slam` (+ `mrpt_vision`) |
 | `mrpt_libhwdrivers` | `mrpt_hwdrivers` (+ `mrpt_comms`) |
 | `mrpt_libapps`    | `mrpt_libapps_cli`, `mrpt_libapps_gui` |
-| `mrpt_apps`       | (same) — installed by `mrpt_libapps_cli` / `mrpt_libapps_gui` |
+| `mrpt_apps`       |  `mrpt_apps_cli` / `mrpt_apps_gui` |
 | `mrpt_libtclap`   | **Removed, see below.** Migrate the CLI parsing in user code to [CLI11](https://github.com/CLIUtils/CLI11) (`cli11-dev` on Ubuntu/Debian) or an equivalent (e.g. `argparse`, `cxxopts`). |
 | `python_mrpt`     | **Removed**: Each package now has its own pybind11-bindings. |
 
@@ -198,6 +131,76 @@ CLI11_PARSE(app, argc, argv);
 During the cutover, the legacy `mrpt_ros` packages will remain released on the ROS build
 farm for already-released ROS distros, but no new features will land here. New downstream
 releases should target MRPT 3.x directly.
+
+
+
+## Mapping between ROS packages <==> MRPT C++ libraries
+
+These are the `<depend>...</depend>` tags you need to include in
+your project `package.xml` depending on [what C++ libraries you use](https://docs.mrpt.org/reference/latest/modules.html):
+
+| ROS 2 package name  | Included MRPT libraries |
+|---|---|
+| `<depend>mrpt_libbase</depend>`    | mrpt-io, mrpt-serialization, mrpt-random, mrpt-system, mrpt-rtti, mrpt-containers, mrpt-typemeta, mrpt-core, mrpt-random, mrpt-config, mrpt-expr |
+| `<depend>mrpt_libgui</depend>`    | mrpt-gui |
+| `<depend>mrpt_libhwdrivers</depend>`    | mrpt-hwdrivers, mrpt-comms |
+| `<depend>mrpt_libapps</depend>`    | mrpt-apps |
+| `<depend>mrpt_libmaps</depend>`    | mrpt-maps, mrpt-graphs |
+| `<depend>mrpt_libmath</depend>`    | mrpt-math |
+| `<depend>mrpt_libnav</depend>`    | mrpt-nav, mrpt-kinematics |
+| `<depend>mrpt_libobs</depend>`    | mrpt-obs, mrpt-topography |
+| `<depend>mrpt_libopengl</depend>`    | mrpt-opengl, mrpt-img |
+| `<depend>mrpt_libposes</depend>`    | mrpt-poses, mrpt-tfest, mrpt-bayes |
+| `<depend>mrpt_libros_bridge</depend>`    | mrpt-ros2bridge (Moved to its own repo) |
+| `<depend>mrpt_libslam</depend>`    | mrpt-slam, mrpt-vision |
+| `<depend>mrpt_libtclap</depend>`    | mrpt-tclap |
+| `<depend>mrpt_apps</depend>`    | Executable [applications](https://docs.mrpt.org/reference/latest/applications.html): RawLogViewer, rawlog-edit, rawlog-grabber, SceneViewer3D, etc. |
+| `<depend>python_mrpt</depend>`    | [pymrpt wrapper](https://docs.mrpt.org/reference/latest/wrappers.html) |
+
+Keep in mind that including one C++ library automatically includes all its dependencies, so you do not need to list them all:
+
+![mrpt_libs](docs/graph_mrpt_libs.png)
+
+## Usage
+
+To get binary packages via `apt install` from the ROS build farm,
+install required packages like:
+
+```bash
+sudo apt install ros-${ROS_DISTRO}-mrpt-libbase  # or any other as needed
+```
+
+Alternatively, if you need to build MRPT from sources (active MRPT developers & testers only),
+clone this repo and build with colcon as usual:
+
+```bash
+cd ~/ros2_ws/src
+git clone --recursive https://github.com/MRPT/mrpt_ros.git
+
+cd ~/ros2_ws/
+rosdep install --from-paths src --ignore-src -r -y
+
+colcon build --symlink-install --parallel-workers 2 --cmake-args -DCMAKE_BUILD_TYPE=RelWithDebInfo
+```
+
+## Build status matrix
+
+| Package |  ROS 2 Humble <br/> BinBuild |  ROS 2 Jazzy <br/> BinBuild | ROS 2 Kilted <br/> BinBuild | ROS 2 Rolling <br/> BinBuild |
+| --- | --- | --- |--- |--- |
+| mrpt_apps | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_apps__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_apps__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_apps__ubuntu_noble_amd64__binary/) |
+| mrpt_libapps | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libapps__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libapps__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libapps__ubuntu_noble_amd64__binary/) |
+| mrpt_libbase | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libbase__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libbase__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libbase__ubuntu_noble_amd64__binary/) |
+| mrpt_libgui | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libgui__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libgui__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libgui__ubuntu_noble_amd64__binary/) |
+| mrpt_libhwdrivers | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libhwdrivers__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libhwdrivers__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libhwdrivers__ubuntu_noble_amd64__binary/) |
+| mrpt_libmaps | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libmaps__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libmaps__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libmaps__ubuntu_noble_amd64__binary/) |
+| mrpt_libmath | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libmath__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libmath__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libmath__ubuntu_noble_amd64__binary/) |
+| mrpt_libnav | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libnav__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libnav__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libnav__ubuntu_noble_amd64__binary/) |
+| mrpt_libobs | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libobs__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libobs__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libobs__ubuntu_noble_amd64__binary/) |
+| mrpt_libopengl | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libopengl__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libopengl__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libopengl__ubuntu_noble_amd64__binary/) |
+| mrpt_libposes | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libposes__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libposes__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libposes__ubuntu_noble_amd64__binary/) |
+| mrpt_libslam | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libslam__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libslam__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libslam__ubuntu_noble_amd64__binary/) |
+| mrpt_libtclap | [![Build Status](https://build.ros2.org/job/Hbin_uJ64__mrpt_libtclap__ubuntu_jammy_amd64__binary/badge/icon)](https://build.ros2.org/job/Hbin_uJ64__mrpt_libtclap__ubuntu_jammy_amd64__binary/) | [![Build Status](https://build.ros2.org/job/Jbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Jbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Kbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Kbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/) |[![Build Status](https://build.ros2.org/job/Rbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/badge/icon)](https://build.ros2.org/job/Rbin_uN64__mrpt_libtclap__ubuntu_noble_amd64__binary/) |
+
 
 ## Motivation for this repository vs older `mrpt2` package
 - Faster build times (for each individual package). It was common to see ROS build farms to time out.
