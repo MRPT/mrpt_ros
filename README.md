@@ -13,9 +13,6 @@
 # DEPRECATED: Move to `mrpt3` as of May-2026
 
 # mrpt-ros
-Fine-grained ROS packages for MRPT libraries and apps. This repository is a replacement for
-the usage of the [upstream MRPT/mrpt](https://github.com/MRPT/mrpt) repo directly as the ROS
-package `mrpt2`.
 
 ## Migration guide: `mrpt_ros` (MRPT 2.x) → native MRPT 3.x packages
 
