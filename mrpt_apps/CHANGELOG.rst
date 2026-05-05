@@ -2,8 +2,8 @@
 Changelog for package mrpt_apps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.15.15 (2026-05-05)
+--------------------
 * SceneViewer3D: new feature to autoreload opened files.
 
 2.15.14 (2026-04-20)
