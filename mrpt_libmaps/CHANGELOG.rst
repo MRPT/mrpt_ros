@@ -2,6 +2,10 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* FIX: update octomap target names for newer version upstream.
+
 2.15.17 (2026-05-09)
 --------------------
 * FIX: upgrade vendored octomap version to latest devel commit to fix cmake errors in Ubuntu 26.04+.
