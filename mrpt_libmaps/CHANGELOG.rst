@@ -2,8 +2,8 @@
 Changelog for package mrpt_libmaps
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.15.18 (2026-05-12)
+--------------------
 * FIX: update octomap target names for newer version upstream.
 
 2.15.17 (2026-05-09)
