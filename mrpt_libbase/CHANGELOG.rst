@@ -2,6 +2,11 @@
 Changelog for package mrpt_libbase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* fix(system): correct dangling-pointer bug in COutputLogger::logDeregisterCallback
+* fix(system): guard COutputLogger's callback list against concurrent register/log
+
 2.15.18 (2026-05-12)
 --------------------
 
