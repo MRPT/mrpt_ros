@@ -64,7 +64,7 @@ ExternalProject_Add(
     -DMRPT_BUILD_MANPAGES=OFF
     -DMRPT_BUILD_TESTING=OFF
     -DMRPT_INSTALL_CONFIG_HEADERS=ON        # only for the "libbase" package
-    -DMRPT_INSTALL_EMBEDDED_nanoflann=ON    # only for the "libbase" package
+    -DMRPT_INSTALL_EMBEDDED_nanoflann=OFF   # nanoflann is provided by the "nanoflann" rosdep package instead
     # Granular builds for each ROS package:
     -DMRPT_BUILD_APPLICATIONS=OFF
     -DMRPT_DISABLE_PYTHON_BINDINGS=ON
