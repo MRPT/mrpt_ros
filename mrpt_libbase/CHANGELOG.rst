@@ -2,6 +2,19 @@
 Changelog for package mrpt_libbase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* mrpt_libbase: stop vendoring nanoflann, use the nanoflann rosdep package
+  The embedded nanoflann.hpp installed by mrpt_libbase clashes with the
+  standalone nanoflann ROS package (both install to the same include path).
+  Disable MRPT_INSTALL_EMBEDDED_nanoflann in mrpt_libbase and depend on the
+  nanoflann rosdep key instead, so MRPT's find_package(nanoflann) picks up
+  the system/rosdep copy. mrpt_libmath and mrpt_libtclap also need the
+  dependency directly since they either expose nanoflann.hpp in a public
+  header (mrpt-math) or have no mrpt_lib* dependency chain to inherit it
+  from (mrpt_libtclap).
+* Contributors: Jose Luis Blanco-Claraco
+
 2.15.19 (2026-07-03)
 --------------------
 * fix(system): correct dangling-pointer bug in COutputLogger::logDeregisterCallback
