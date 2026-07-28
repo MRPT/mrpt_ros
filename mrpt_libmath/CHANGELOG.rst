@@ -2,8 +2,8 @@
 Changelog for package mrpt_libmath
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Forthcoming
------------
+2.15.20 (2026-07-28)
+--------------------
 * mrpt_libbase: stop vendoring nanoflann, use the nanoflann rosdep package
   The embedded nanoflann.hpp installed by mrpt_libbase clashes with the
   standalone nanoflann ROS package (both install to the same include path).
