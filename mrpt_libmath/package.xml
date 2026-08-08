@@ -20,7 +20,7 @@
   <depend>mrpt_libbase</depend>
 
   <depend>eigen</depend>
-  <depend>nanoflann</depend>
+  <depend>nanoflann_vendor</depend>
   <depend>suitesparse</depend>
 
 
