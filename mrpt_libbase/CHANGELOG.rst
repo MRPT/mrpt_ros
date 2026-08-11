@@ -2,6 +2,14 @@
 Changelog for package mrpt_libbase
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+Forthcoming
+-----------
+* Depend on nanoflann_vendor instead of nanoflann
+  The nanoflann rosdep key resolves to the distro's own libnanoflann-dev,
+  so it can never select a newer vendored version. Switch to the new
+  nanoflann_vendor ROS package name.
+* Contributors: Jose Luis Blanco-Claraco
+
 2.15.20 (2026-07-28)
 --------------------
 * mrpt_libbase: stop vendoring nanoflann, use the nanoflann rosdep package
